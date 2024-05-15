@@ -7,23 +7,13 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'VueIntermediateTodoFooter',
 
-  data() {
-    return {
-
-    };
-  },
-
-  mounted() {
-
-  },
-
   methods: {
-    clearTodo: function (){
-      this.$emit('clearAll');
-    }
+    ...mapMutations({ clearTodo: 'clearAllItems' }),
+
 
   },
 };
